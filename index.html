@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Future Drive Giveaway 2026</title>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
+
+    body {
+        background: #08111f;
+        color: #fff;
+        padding: 20px;
+    }
+
+    .container {
+        max-width: 600px;
+        margin: auto;
+    }
+
+    .header {
+        text-align: center;
+        margin-bottom: 25px;
+    }
+
+    .header h1 {
+        font-size: 42px;
+        margin-bottom: 10px;
+    }
+
+    .red {
+        color: #ff4040;
+    }
+
+    .card {
+        background: #111d32;
+        border-radius: 20px;
+        padding: 25px;
+        margin-bottom: 20px;
+        box-shadow: 0 5px 20px rgba(0,0,0,.3);
+    }
+
+    h2 {
+        margin-bottom: 20px;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 8px;
+        margin-top: 15px;
+        font-weight: bold;
+    }
+
+    input, select {
+        width: 100%;
+        padding: 15px;
+        border: none;
+        border-radius: 12px;
+        background: #1c2940;
+        color: white;
+        font-size: 16px;
+    }
+
+    .row {
+        display: flex;
+        gap: 10px;
+    }
+
+    .row div {
+        flex: 1;
+    }
+
+    button {
+        width: 100%;
+        background: #ff4040;
+        color: white;
+        border: none;
+        padding: 18px;
+        border-radius: 15px;
+        font-size: 18px;
+        font-weight: bold;
+        cursor: pointer;
+        margin-top: 20px;
+    }
+
+    button:hover {
+        background: #e13232;
+    }
+
+    .badge {
+        display: inline-block;
+        padding: 10px 15px;
+        border-radius: 30px;
+        background: #143321;
+        color: #57ff9b;
+        margin-bottom: 20px;
+        font-weight: bold;
+    }
+
+    .disclaimer {
+        font-size: 13px;
+        color: #b5b5b5;
+        margin-top: 20px;
+        line-height: 1.6;
+    }
+
+    .success {
+        display: none;
+        background: #123b22;
+        color: #57ff9b;
+        padding: 15px;
+        border-radius: 12px;
+        margin-top: 20px;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="header">
+        <h1>Future Drive <span class="red">Giveaway</span></h1>
+        <p>EV Giveaway 2026</p>
+    </div>
+
+    <div class="badge">
+        ● FREE ENTRY
+    </div>
+
+    <div class="card">
+        <h2>Choose Your Electric Car Model</h2>
+
+        <label>Preferred Model</label>
+
+        <select required>
+            <option>Tesla Model 3</option>
+            <option>Tesla Model Y</option>
+            <option>Tesla Model S</option>
+            <option>Tesla Model X</option>
+            <option>Hyundai Ioniq 5</option>
+            <option>Kia EV6</option>
+            <option>Nissan Leaf</option>
+        </select>
+    </div>
+
+    <form id="giveawayForm">
+
+        <div class="card">
+            <h2>Personal Information</h2>
+
+            <label>Full Name</label>
+            <input type="text" required>
+
+            <label>Email Address</label>
+            <input type="email" required>
+
+            <label>Phone Number</label>
+            <input type="tel" required>
+        </div>
+
+        <div class="card">
+            <h2>Delivery Address</h2>
+
+            <label>Street Address</label>
+            <input type="text" required>
+
+            <div class="row">
+
+                <div>
+                    <label>City</label>
+                    <input type="text" required>
+                </div>
+
+                <div>
+                    <label>ZIP / Postal Code</label>
+                    <input type="text" required>
+                </div>
+
+            </div>
+
+            <label>Country</label>
+            <input type="text" required>
+        </div>
+
+        <button type="submit">
+            Submit Free Entry
+        </button>
+
+        <div class="success" id="successMsg">
+            ✅ Thank you! Your giveaway entry has been received.
+        </div>
+
+    </form>
+
+    <div class="disclaimer">
+        This promotion is independently organized and is not affiliated with,
+        endorsed by, sponsored by, or associated with Tesla, Hyundai, Kia,
+        Nissan, or any other vehicle manufacturer. Entry into this giveaway
+        does not guarantee selection as a winner. Please review all applicable
+        giveaway rules and local laws before participating.
+    </div>
+
+</div>
+
+<script>
+document.getElementById("giveawayForm")
+.addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    document.getElementById("successMsg")
+    .style.display = "block";
+
+    this.reset();
+
+    window.scrollTo({
+        top: document.body.scrollHeight,
+        behavior: "smooth"
+    });
+});
+</script>
+
+</body>
+</html>
